@@ -13,24 +13,25 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>Name</th>
                             <th>Kind of room</th>
                             <th style="width:30%">Image</th>
-                            <th>Speciality</th>
+                            <th>Description</th>
                             <th colspan="2" width=1%>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($rooms as $key => $room)
                         <tr>
-                            <td>Double Room</td>
-                            <td ><img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/253913443.jpg?k=edb425f87f1a04ebad6722858e106b5df9145a693d623aa578a8ba9672f62767&o=" width="100%" ></td>
-                            <td>Room size: 25 m²<br>
-                                Room direction: Lake<br>
-                                1 large double bed</td>  
-                            <td>
+                            <td>{{ $room->name }}</td>
+                            <td>{{ $room->room_type->name }}</td>
+                            <td ><img src="{{ asset('image/room/'.$room->image )}}" width="100%" ></td>
+                            <td>{{ $room->description }}<td>
                                 <a  href="{{ route('admin.detail',1) }}"><i class="fas fa-fw fa-eye"></i></a>
                                 <a><i class="fas fa-fw fa-pen"></i></a>
                             </td>
                         </tr>
+                        @endforeach
                         {{-- <tr>
                             <td>Garrett Winters</td>
                             <td>Accountant</td>

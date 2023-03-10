@@ -25,6 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
         
         Route::get('/room', '\App\Http\Controllers\Admin\RoomController@index')->name('admin.room');
         Route::get('/room/form', '\App\Http\Controllers\Admin\RoomController@create')->name('admin.form');
+        Route::post('/room/form', '\App\Http\Controllers\Admin\RoomController@store')->name('admin.room.store');
         Route::get('/room/{id}',  '\App\Http\Controllers\Admin\RoomController@show')->name('admin.detail');
         // Route::get('/{path?}', function($path = null){
         //     return View::make('admin.index');
