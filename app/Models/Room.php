@@ -14,6 +14,7 @@ class Room extends Model
         'image',
         'description',
         'type_id',
+        'price',
     ];
     public function room_type()
     {

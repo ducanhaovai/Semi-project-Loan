@@ -12,8 +12,8 @@
                 <li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>
                 <li class="nav-item"><a href="hotel.html" class="nav-link">Hotels</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Add listing</span></a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Sig in</a></li>
+                <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Log In</span></a></li>
             </ul>
         </div>
     </div>

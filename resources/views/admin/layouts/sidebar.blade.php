@@ -36,8 +36,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('admin.room') }}"><i class="fas fa-fw fa-list"></i> List of Room</a>
-                <a class="collapse-item" href="{{ route('admin.form') }}"><i class="fas fa-fw fa-plus"></i> Add New</a>
+                <a class="collapse-item" href="{{ route('room') }}"><i class="fas fa-fw fa-list"></i> List of Room</a>
+                <a class="collapse-item" href="{{ route('room.form') }}"><i class="fas fa-fw fa-plus"></i> Add New</a>
             </div>
         </div>
     </li>

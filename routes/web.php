@@ -20,13 +20,17 @@ Route::get('/login', function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
-        // Route::get("/", "TwoFaceAuthsController@index")->name("2fa_setting");
-        Route::get('/index', '\App\Http\Controllers\Admin\AdminController@index');
+        // Route::get('/index', '\App\Http\Controllers\Admin\AdminController@index');
+        Route::get('/index', '\App\Http\Controllers\Admin\RoomController@index');
         
-        Route::get('/room', '\App\Http\Controllers\Admin\RoomController@index')->name('admin.room');
-        Route::get('/room/form', '\App\Http\Controllers\Admin\RoomController@create')->name('admin.form');
-        Route::post('/room/form', '\App\Http\Controllers\Admin\RoomController@store')->name('admin.room.store');
-        Route::get('/room/{id}',  '\App\Http\Controllers\Admin\RoomController@show')->name('admin.detail');
+        Route::get('/room', '\App\Http\Controllers\Admin\RoomController@index')->name('room');
+        Route::get('/room/create', '\App\Http\Controllers\Admin\RoomController@create')->name('room.form');
+        Route::post('/room/create', '\App\Http\Controllers\Admin\RoomController@store')->name('room.store');
+        Route::get('/room/{id}/edit',  '\App\Http\Controllers\Admin\RoomController@edit')->name('room.edit');
+        Route::post('/room/{id}/edit',  '\App\Http\Controllers\Admin\RoomController@update')->name('room.update');
+        Route::get('/room/{id}/delete',  '\App\Http\Controllers\Admin\RoomController@destroy')->name('room.delete');
+        Route::get('/room/{id}',  '\App\Http\Controllers\Admin\RoomController@show')->name('room.detail');
+
         // Route::get('/{path?}', function($path = null){
         //     return View::make('admin.index');
         // })->where('path', '.*');
